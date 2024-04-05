@@ -1,4 +1,6 @@
 # MSFS2020_AutoFPS
+Forked from ResetXPDRS AutoFPS tool, https://github.com/ResetXPDRS/MSFS-Autofps
+The only change I've made is updating the icon to something more modern. I will try my best to keep this  updated with any changes that occur in the original authors verison.
 
 Based on muumimorko's idea and code in MSFS_AdaptiveLOD, as further developed by Fragtality in DynamicLOD and myself in DynamicLOD_ResetEdition.<br/><br/>
 
