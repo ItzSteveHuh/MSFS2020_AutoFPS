@@ -1,5 +1,5 @@
 # MSFS2020_AutoFPS
-Forked from ResetXPDRS AutoFPS tool, https://github.com/ResetXPDRS/MSFS_Autofps
+Forked from ResetXPDRS AutoFPS tool, https://github.com/ResetXPDR/MSFS2020_AutoFPS
 The only change I've made is updating the icon to something more modern. I will try my best to keep this  updated with any changes that occur in the original authors verison.
 
 ## Notice
