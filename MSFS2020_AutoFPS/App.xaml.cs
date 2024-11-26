@@ -55,6 +55,7 @@ namespace MSFS2020_AutoFPS
                 Application.Current.Shutdown();
                 return;
             }
+
             Directory.SetCurrentDirectory(AppDir);
 
             if (!File.Exists(ConfigFile))
@@ -104,7 +105,7 @@ namespace MSFS2020_AutoFPS
                     Model.MemoryAccess.SetTLOD_VR(Model.DefaultTLOD_VR);
                     Model.MemoryAccess.SetOLOD_PC(Model.DefaultOLOD);
                     Model.MemoryAccess.SetOLOD_VR(Model.DefaultOLOD_VR);
-                    Logger.Log(LogLevel.Information, "App:OnExit", $"Resetting cloud quality to {Model.CloudQualityText(Model.DefaultCloudQ)} / VR {Model.CloudQualityText(Model.DefaultCloudQ_VR)}");
+                    Logger.Log(LogLevel.Information, "App:OnExit", $"Resetting cloud quality to {ServiceModel.CloudQualityText(Model.DefaultCloudQ)}  / VR  {ServiceModel.CloudQualityText(Model.DefaultCloudQ_VR)}");
                     Model.MemoryAccess.SetCloudQ(Model.DefaultCloudQ);
                     Model.MemoryAccess.SetCloudQ_VR(Model.DefaultCloudQ_VR);
                     if (Model.MemoryAccess.GetTLOD_PC() == Model.DefaultTLOD) // As long as one setting restoration stuck
@@ -151,7 +152,7 @@ namespace MSFS2020_AutoFPS
             Log.Information($"-----------------------------------------------------------------------");
             string assemblyVersion = Assembly.GetExecutingAssembly().GetName().Version.ToString();
             //assemblyVersion = assemblyVersion[0..assemblyVersion.LastIndexOf('.')];
-            Logger.Log(LogLevel.Information, "App:InitLog", $"MSFS2020_AutoFPS v{assemblyVersion} started! Log Level: {logLevel} Log File: {logFilePath}");
+            Logger.Log(LogLevel.Information, "App:InitLog", $"MSFS2020_AutoFPS v{assemblyVersion}{(ServiceModel.TestVersion ? ServiceModel.TestVariant : "")} started! Log Level: {logLevel} Log File: {logFilePath}");
         }
 
         protected void InitSystray()
